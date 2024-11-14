@@ -174,11 +174,11 @@ function toggleFavorite(id, event) {
   if (favorites.includes(id)) {
     favorites = favorites.filter(favoriteId => favoriteId !== id);
     heartButton.style.fill = 'none';
-    alert('Recipe removed from favorites!');
+    
   } else {
     favorites.push(id);
     heartButton.style.fill = 'red';
-    alert('Recipe added to favorites!');
+    
   }
 
   localStorage.setItem('favorites', JSON.stringify(favorites));
