@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div id="header-background">
+            <img src="image/weatherrr.png" alt="Weather Background" id="weather-photo">
+            <h1>Weather App</h1>
+            <div id="search-container">
+                <input type="text" id="city-input" placeholder="Search city" oninput="searchCityWeather()">
+                <div id="autocomplete-list"></div>
+                <button onclick="getUserLocation()">My Location</button>
+                <div id="unit-toggle">
+                    <label class="switch">
+                        <input type="checkbox" id="unit-switch" onclick="toggleUnits()">
+                        <span class="slider"></span>
+                    </label>
+                    <span id="unit-label">°C</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    
+
+    
+
+    <div id="weather-container">
+        <div id="current-weather">
+            
+        </div>
+
+        <div id="forecast">
+           
+        </div>
+        <div id="infoo">
+
+        </div>
+    </div>
+    
+
+    <script src="weather.js"></script>
+</body>
+</html>

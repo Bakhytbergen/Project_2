@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie App</title> 
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+  <header>
+    <img src="image/homee.png" alt="" class="header-image"> <!-- Header image -->
+    <div class="site-title">Movie Explorer</div> <!-- Website title -->
+    <div class="button-container">
+      <input type="text" id="search" placeholder="Search movies..."> <!-- Search input -->
+      <div id="autocomplete-list" class="autocomplete-list"></div> <!-- Autocomplete suggestions -->
+
+      <!-- Sort buttons -->
+      <button id="sort-popularity">Sort by Popularity</button>
+      <button id="sort-release-date">Sort by Release Date</button>
+      <button id="sort-rating">Sort by Rating</button>
+      <button id="view-watchlist" onclick="toggleView('watchlist')">View Watchlist</button>
+      <button id="view-main" onclick="toggleView('main')" style="display: none;">View Main</button>
+    </div>
+  </header>
+
+  <div id="autocomplete-suggestions" class="autocomplete-suggestions"></div> <!-- Autocomplete suggestions container -->
+  <div id="movies-grid" class="movies-grid"></div> <!-- Movie list/grid -->
+
+  <!-- Modal for movie details -->
+  <div id="movie-modal" class="modal">
+    <div id="movie-details" class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span> <!-- Close button -->
+      <div class="movie-details-content">
+        <h2>Movie Title</h2> <!-- Movie title -->
+        <p>Details about the movie...</p> <!-- Movie details -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Watchlist section -->
+  <section id="watchlist-section" style="display: none;">
+    <div id="watchlist-grid" class="movies-grid"></div> <!-- Watchlist grid -->
+  </section>
+
+  <script src="script.js"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>
