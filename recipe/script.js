@@ -1,4 +1,4 @@
-const apiKey = '73858d75f7de4ce28adebb3b904f40d4';
+const apiKey = 'abdb3edb90364b3fb89f52860c74961e';
 const apiUrl = 'https://api.spoonacular.com/recipes';
 
 document.getElementById('favorites-btn').addEventListener('click', showFavorites);

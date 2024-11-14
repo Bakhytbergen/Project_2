@@ -198,11 +198,11 @@ function toggleWatchlist(id, event) {
   if (watchlist.includes(id)) {
     watchlist = watchlist.filter(movieId => movieId !== id);
     heartButton.style.fill = 'none'; 
-    alert('Removed from Watchlist');
+    
   } else {
     watchlist.push(id);
     heartButton.style.fill = 'red'; 
-    alert('Added to Watchlist');
+    
   }
 
   localStorage.setItem('watchlist', JSON.stringify(watchlist));
